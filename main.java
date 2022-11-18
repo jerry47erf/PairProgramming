@@ -1,3 +1,5 @@
+//CODE TO CHECK WHETHER A NUMBER IS PRIME OR COMPOSITE
+
 import java.util.*;
 
 class Main
@@ -10,7 +12,7 @@ class Main
         prime[0] = false;
         prime[1] = false;
 
-      
+      for(int p =2; p*p <= max_val; p++)
         {
 
             if (prime[p])
@@ -21,6 +23,7 @@ class Main
         }
         return prime;
     }
+    
     static void kMinXOR(Integer[] arr, int n, int k)
     {
 
@@ -53,6 +56,9 @@ class Main
                     minHeapNonPrime.add(arr[i]);
                 }
             }
+        }
+        
+        long primeXOR = 0, nonPrimeXor = 0;
 
         while (k-- > 0)
         {
@@ -62,7 +68,8 @@ class Main
                 minHeapPrime.poll();
             }
 
-          
+            if(minHeapNonPrime.size() > 0)
+            {
                 nonPrimeXor ^= minHeapNonPrime.peek();
                 minHeapNonPrime.poll();
             }
