@@ -1,12 +1,19 @@
 //CODE TO FIND LARGEST NUMBER AMONG ENTERED 3 NUMBERS
 
+package Opps;
+import java.util.Scanner;
 public class Main {
 
-        public static void main(String args[])
-
-            int x = 69, y = 10, z = 19;
-            if(x >= y)
-            {
+        public static void main(String args[]){
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("The 1st number");
+        Double x = sc.nextDouble();
+        System.out.println("The 2nd number");
+        Double y = sc.nextDouble();
+        System.out.println("The 3rd number");
+        Double z = sc.nextDouble();
+        if(x >= y)
+        {
                 if(x >= z)
                     System.out.println("The largest number is: "+x);
                 else
